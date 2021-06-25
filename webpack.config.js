@@ -26,6 +26,9 @@ module.exports = () => ({
                 target: "https://veg2.herokuapp.com",
                 secure: false,
                 changeOrigin: true,
+                onProxyReq(request, req, res) {
+                    request.setHeader('origin', 'https://veg2.herokuapp.com')
+                }
             },
             "/socket.io": {
                 target: "https://veg2.herokuapp.com",
