@@ -32,7 +32,7 @@ module.exports = () => ({
                 secure: false,
             },
         },
-        port: "3000",
+        port: "3001",
     },
     module: {
         rules: [
