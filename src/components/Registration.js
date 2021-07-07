@@ -10,7 +10,7 @@ import useForm from "../hooks/useForm";
 const Registration = ({ classes }) => {
     console.log('[EXPO REGISTRANDO]')
     const [values, handleChange] = useForm();
-    const [submit, progress] = useAuthSubmit("/register", values);
+    const [submit, progress] = useAuthSubmit(values);
 
     return (
         <>
