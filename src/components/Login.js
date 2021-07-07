@@ -8,7 +8,7 @@ import useForm from "../hooks/useForm";
 
 const Login = ({ classes }) => {
     const [values, handleChange] = useForm();
-    const [submit, progress] = useAuthSubmit("/login", values);
+    const [submit, progress] = useAuthSubmit(values);
 
     return (
         <>
