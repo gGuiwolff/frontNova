@@ -7,7 +7,6 @@ const useForm = () => {
         ({ target, progress }) => {
             setValues({
                 ...values,
-                target.name = 'https://veg2.herokuapp.com'
                 [target.name]: target.value,
             });
         },
