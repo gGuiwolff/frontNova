@@ -1,5 +1,5 @@
 import { useState } from "react";
-import axios from "../axios";
+import { instance } from "../axios";
 
 const useAuthSubmit = (url, values, reset, secondUrl) => {
     const [progress, setProgress] = useState({
