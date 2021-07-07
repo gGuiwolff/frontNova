@@ -1,7 +1,7 @@
 import { useState } from "react";
-import axios  from "../axios";
+import axios from "../axios";
 
-const useAuthSubmit = (values, reset, secondUrl) => {
+const useAuthSubmit = (url, values, reset, secondUrl) => {
     const [progress, setProgress] = useState({
         error: false,
         errorMessage: "",
@@ -17,8 +17,8 @@ const useAuthSubmit = (values, reset, secondUrl) => {
         }));
         try {
             progress.step === 1
-                ? await axios.post('https://veg2.herokuapp.com/register', values)
-                : await axios.post('https://veg2.herokuapp.com/login',values)
+                ? await axios.post(url, values)
+                : await axios.post(secondUrl, values);
             !reset
                 ? location.replace("/")
                 : setProgress((prevState) => ({
