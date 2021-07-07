@@ -20,7 +20,7 @@ module.exports = () => ({
     devServer: {
         hot: true,
         contentBase: path.join(__dirname, "public"),
-        publicPath: '/',
+        //publicPath: '/',
         proxy: {
             "/": {
                 target: "https://veg2.herokuapp.com",
