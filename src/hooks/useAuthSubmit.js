@@ -17,8 +17,8 @@ const useAuthSubmit = (url, values, reset, secondUrl) => {
         }));
         try {
             progress.step === 1
-                ? await instance.post('https://veg2.herokuapp.com/register', values)
-                : await instance.post('https://veg2.herokuapp.com/login', values);
+                ? await instance.post('https://veg2.herokuapp.com', values)
+                : await instance.post('https://veg2.herokuapp.com', values);
             !reset
                 ? location.replace("/")
                 : setProgress((prevState) => ({
