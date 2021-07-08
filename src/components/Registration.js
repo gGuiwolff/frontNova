@@ -26,6 +26,7 @@ const Registration = ({ classes }) => {
                     Register now
                 </Typography>
                 <form className={classes.form} onSubmit={submit}>
+                    <input type="hidden" name="_csrf" value="{{csrfToken}}">
                     <TextField
                         type="text"
                         name="firstName"
