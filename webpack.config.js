@@ -16,6 +16,9 @@ module.exports = () => ({
         hints: false,
     },
     devServer: {
+       allowedHosts: [
+       "https://veg2.herokuapp.com/",
+    ],
         hot: true,
         contentBase: path.join(__dirname, "public"),
         publicPath: '/',
@@ -31,7 +34,6 @@ module.exports = () => ({
                 secure: false,
             },
         },
-        port: "3000",
     },
     module: {
         rules: [
