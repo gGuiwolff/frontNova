@@ -17,7 +17,7 @@ module.exports = () => ({
     },
     devServer: {
        allowedHosts: [
-       "https://veg2.herokuapp.com/",
+       "https://veg2.herokuapp.com",
     ],
         hot: true,
         contentBase: path.join(__dirname, "public"),
