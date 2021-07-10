@@ -22,13 +22,12 @@ module.exports = () => ({
         proxy: {
             "/": {
                 target: "https://veg2.herokuapp.com",
-                secure: false,
-                changeOrigin: true,
+                secure: true,
             },
             "/socket.io": {
                 target: "https://veg2.herokuapp.com",
                 ws: true,
-                secure: false,
+                secure: true,
             },
         },
     },
