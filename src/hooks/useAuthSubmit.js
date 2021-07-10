@@ -1,5 +1,14 @@
 import { useState } from "react";
-import { instance } from "../axios";
+
+import axios from "axios";
+
+var instance = axios.create({
+    baseURL: "https://veg2.herokuapp.com",
+    xsrfCookieName: "mytoken",
+    xsrfHeaderName: "csrf-token",
+});
+
+
 
 const useAuthSubmit = (url, values, reset, secondUrl) => {
     const [progress, setProgress] = useState({
