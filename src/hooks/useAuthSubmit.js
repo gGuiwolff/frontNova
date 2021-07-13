@@ -1,12 +1,12 @@
 import { useState } from "react";
 
-import axios from "axios";
+import axios from "../axios";
 
-var instance = axios.create({
+/*var instance = axios.create({
     baseURL: "https://veg2.herokuapp.com",
     xsrfCookieName: "mytoken",
     xsrfHeaderName: "csrf-token",
-});
+});*/
 
 
 
@@ -26,8 +26,8 @@ const useAuthSubmit = (url, values, reset, secondUrl) => {
         }));
         try {
             progress.step === 1
-                ? await instance.post(url, values)
-                : await instance.post(secondUrl, values);
+                ? await axios.post(url, values)
+                : await axios.post(secondUrl, values);
             !reset
                 ? location.replace("/")
                 : setProgress((prevState) => ({
