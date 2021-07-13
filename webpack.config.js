@@ -16,6 +16,7 @@ module.exports = () => ({
         hints: false,
     },
     devServer: {
+        https: true,
         hot: true,
         contentBase: path.join(__dirname, "public"),
         publicPath: '/',
