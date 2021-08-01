@@ -1,7 +1,7 @@
 import axios from "axios";
 
 var instance = axios.create({
-    baseURL:"https://backnovo.herokuapp.com",
+    baseURL:"https://backnovo2.herokuapp.com",
     xsrfCookieName: "mytoken",
     xsrfHeaderName: "csrf-token",
 });
